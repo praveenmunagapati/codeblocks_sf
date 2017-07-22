@@ -593,14 +593,7 @@ void ScintillaWX::Copy() {
 /* C::B end */
         SelectionText st;
         CopySelectionRange(&st);
-/* C::B begin */
-#ifdef __WXGTK__
-		for (int i=0; i<5; i++)
-        	CopyToClipboard(st);
-#else
-     	CopyToClipboard(st);
-#endif
-/* C::B end */
+        CopyToClipboard(st);
     }
 }
 
