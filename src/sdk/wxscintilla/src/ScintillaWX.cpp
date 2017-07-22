@@ -774,7 +774,6 @@ void ScintillaWX::AddToPopUp(const char *label, int cmd, bool enabled) {
 // For wxGTK we can put this text in the primary selection and then other apps
 // can paste with the middle button.
 void ScintillaWX::ClaimSelection() {
-#if 0
 #ifdef __WXGTK__
     // Put the selected text in the PRIMARY selection
 /* C::B begin */
@@ -790,7 +789,6 @@ void ScintillaWX::ClaimSelection() {
         }
         wxTheClipboard->UsePrimarySelection(false);
     }
-#endif
 #endif
 }
 
